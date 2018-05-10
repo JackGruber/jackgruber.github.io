@@ -25,7 +25,7 @@ title: JackGruber
 navbar-links:
   Blog:
     - Posts: "blog"
-    - Tags: "tags"
+    - Tags: "blog/tags"
   About Me: "pages/aboutme"
 nav-search: "pages/search"
 
@@ -88,6 +88,7 @@ social-network-links:
 #  twitch: yourname
 #  yelp: yourname
   github: jackgruber
+  
 # Select which share links to show in posts
 #share-links-active:
 #  twitter: true
@@ -153,7 +154,7 @@ defaults:
     values:
       layout: "post"
       comments: true  # add comments to all blog posts
-      social-share: true # add social media sharing buttons to all blog posts
+      social-share: false # add social media sharing buttons to all blog posts
   -
     scope:
       path: "" # all files
