@@ -19,9 +19,9 @@ Microsoft Windows Server NT4, 2000 - 2016 &bull;
 Microsoft Windows XP-10
 
 #### <i class="fa fa-cloud" aria-hidden="true"></i> 
-Software Virtualization (VMware ThinApp) &bull; 
-Hypervisor (VMware ESX, Microsoft Hyper-V) &bull;
-Virtual Desktop Infrastructure (VMware VDI - Horizon)
+Software Virtualization ([VMware](https://www.vmware.com/) ThinApp) &bull; 
+Hypervisor ([VMware](https://www.vmware.com/) ESX, Microsoft Hyper-V) &bull;
+Virtual Desktop Infrastructure ([VMware](https://www.vmware.com/) VDI - Horizon)
 
 #### <i class="fa fa-area-chart" aria-hidden="true"></i> Monitoring
 Log managment ([Splunk](https://www.splunk.com/)) &bull;
@@ -29,10 +29,10 @@ Networkmonitoring ([PRTG](https://www.paessler.com))
 
 #### <i class="fa fa-gears" aria-hidden="true"></i> Skills
 Active Directory &bull;
-Storage Systems (NetApp) &bull;
-DBs (MSSQL, MySQL) &bull;
+Storage Systems ([NetApp](https://www.netapp.com/)) &bull;
+DBs (MSSQL) &bull;
 Network, WiFi (Enterasys meanwhile [Extreme Networks](https://www.extremenetworks.com/)) &bull;
-WAN SilverPeak &bull;
+SD-WAN ([silver peak](https://www.silver-peak.com/)) &bull;
 
 #### <i class="fa fa-filter" aria-hidden="true"></i> Security
 Network Access Control ([Extreme Networks](https://www.extremenetworks.com/) Policy and NAC [802.1x] ) &bull;
