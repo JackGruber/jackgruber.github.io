@@ -18,11 +18,11 @@ Arduino
 
 #### <i class="fa fa-terminal" aria-hidden="true"></i> Operating Systems
 Microsoft Windows Server NT4, 2000 - 2016 &bull;
-Microsoft Windows XP-10
+Microsoft Windows XP-10 &bull; a little Linux
 
 #### <i class="fa fa-cloud" aria-hidden="true"></i> 
 Software Virtualization ([VMware](https://www.vmware.com/) ThinApp) &bull; 
-Hypervisor ([VMware](https://www.vmware.com/) ESX, Microsoft Hyper-V) &bull;
+Hypervisor ([VMware](https://www.vmware.com/) ESX, [Microsoft](https://www.microsoft.com) Hyper-V) &bull;
 Virtual Desktop Infrastructure ([VMware](https://www.vmware.com/) VDI - Horizon)
 
 #### <i class="fa fa-area-chart" aria-hidden="true"></i> Monitoring
@@ -32,7 +32,8 @@ Networkmonitoring ([PRTG](https://www.paessler.com))
 #### <i class="fa fa-gears" aria-hidden="true"></i> Skills
 Active Directory &bull;
 Storage Systems ([NetApp](https://www.netapp.com/)) &bull;
-DBs (MSSQL) &bull;
+SQL &bull;
+DBs ([Microsoft](https://www.microsoft.com) SQL Server) &bull;
 Network, WiFi (Enterasys meanwhile [Extreme Networks](https://www.extremenetworks.com/)) &bull;
 SD-WAN ([silver peak](https://www.silver-peak.com/)) &bull;
 
