@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Capture output from command line tools with PowerShell"
+tags: [powershell, code]
+category: PowerShell, process
+bigimg: "/img/head/code.jpg"
+---
+
+There are several ways to execute an external process and capture and process its command output in PowerShell.
+
+**Quite simple**
+```powershell
+$OutputVariable = (cmd.exe /c ping localhost) | Out-String
+```
+
+The problem with this short sample is, the **stderr** is not capture, only the **stdout**. 
+
+With the example below it is possible to capture both outputs.
+ 
+```powershell
+function Get-ProcessOutput
+{
+    Param (
+        [Parameter(Mandatory=$true)]$FileName,
+        $Args
+    )
+    
+    $process = New-Object System.Diagnostics.Process
+    $process.StartInfo.UseShellExecute = $false
+    $process.StartInfo.RedirectStandardOutput = $true
+    $process.StartInfo.RedirectStandardError = $true
+    $process.StartInfo.FileName = $FileName
+    if($Args) { $process.StartInfo.Arguments = $Args }
+    $out = $process.Start()
+    
+    $StandardError = $process.StandardError.ReadToEnd()
+    $StandardOutput = $process.StandardOutput.ReadToEnd()
+    
+    $output = New-Object PSObject
+    $output | Add-Member -type NoteProperty -name StandardOutput -Value $StandardOutput
+    $output | Add-Member -type NoteProperty -name StandardError -Value $StandardError
+    return $output
+}
+
+$output = Get-ProcessOutput -FileName "cmd.exe" -Args "/c ping localhost"
+Write-Host -ForegroundColor green $output.StandardOutput
+Write-Host -ForegroundColor red $output.StandardError
+```
+
+
+
+<script src="https://gist.github.com/JackGruber/142863ba8c76132d7b704b5decb8a8a8.js"></script>
