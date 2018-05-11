@@ -25,7 +25,7 @@ Virtual Desktop Infrastructure (VMware VDI - Horizon)
 
 #### <i class="fa fa-area-chart" aria-hidden="true"></i> Monitoring
 Log managment (Splunk) &bull;
-Networkmonitoring (PRTG) 
+Networkmonitoring ([PRTG](https://www.paessler.com)) 
 
 #### <i class="fa fa-gears" aria-hidden="true"></i> Skills
 Active Directory &bull;
