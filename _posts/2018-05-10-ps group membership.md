@@ -4,7 +4,6 @@ title: "Check group membership with PowerShell"
 tags: [powershell, code]
 category: PowerShell
 bigimg: "/img/head/code.jpg"
-css: pygment_highlights.css
 ---
 
 Check group membership from the current user without Active Directory PowerShell module.
