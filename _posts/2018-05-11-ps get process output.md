@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Capture output from command line tools with PowerShell"
-tags: [powershell, code]
-category: PowerShell, process
+tags: [powershell, code, process]
+category: PowerShell
 bigimg: "/img/head/code.jpg"
 ---
 
