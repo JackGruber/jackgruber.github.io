@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: "aboutme"
-title: About me
+permalink: "aboutme2"
+title: About me2
 ---
 
 ### <i class="fa fa-cubes" aria-hidden="true"></i> Skills
