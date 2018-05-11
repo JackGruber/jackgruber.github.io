@@ -3,6 +3,8 @@ layout: page
 permalink: "aboutme2"
 title: About me2
 ---
+<img src="/img/aboutme.jpg">
+My name is Alexander Gruber an i live in the small "green" municipal [Wildpoldsried](http://www.wildpoldsried.de/) near the alps.
 
 ### <i class="fa fa-cubes" aria-hidden="true"></i> Skills
 
