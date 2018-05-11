@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: "aboutme"
+permalink: "/pages/aboutme"
 title: About me
 ---
 <img src="/img/aboutme.jpg">
