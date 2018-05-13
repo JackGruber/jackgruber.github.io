@@ -10,12 +10,12 @@ After all images has been pushed, create a manifest file and push them as :lates
 
 **Create and push manifest file**
 ```
-docker manifest create --amend \
+$ docker manifest create --amend \
     jackgruber/manifest:latest \
     jackgruber/manifest:armhf \
     jackgruber/manifest:amd64
 
-docker manifest push jackgruber/manifest:latest
+$ docker manifest push jackgruber/manifest:latest
 ```
 
 You can inspect a manifest through follow command:
