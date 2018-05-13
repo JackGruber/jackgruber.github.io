@@ -2,6 +2,7 @@
 layout: post
 title: Push a multi architecture image to Docker Hub
 show-img: true
+tags: [docker, howto]
 image: /img/docker.png
 ---
 To create Docker images with multi architecture support, create your Docker image as usual with a tag 
@@ -22,7 +23,7 @@ You can inspect a manifest through follow command:
 ```
 docker manifest inspect jackgruber/manifest
 ```
-<img src="/img/posts/drafts/manifest_inspect.jpg">
+<img src="/img/posts/2018-05-13/manifest_inspect.jpg">
 
 Now the matching version for the architecture is loaded with the ```docker run jackgruber/manifest``` command.
 
@@ -30,4 +31,4 @@ Now the matching version for the architecture is loaded with the ```docker run j
 ## Enable experimental mode
 At the moment the manifest command is experimental and must be enabled.
 For enabling this, edit the ```~/.docker/config.json``` and add following option ```"experimental": "enabled"```.
-<img src="/img/posts/drafts/config.json.png">
+<img src="/img/posts/2018-05-13/config.json.png">
