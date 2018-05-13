@@ -4,11 +4,11 @@ title: Push a multi architecture image to Docker Hub
 show-img: true
 image: /img/hello_world.jpeg
 ---
-to create docker images with multi architecture support, create your docker image as usual for every platform. 
-Then tag the images with a tag for the architecture and push them to docker. 
-After all images has been pushed, create a manifest file an push them as :latest image to the hub.
+To create docker images with multi architecture support, create your docker image as usual with a tag 
+for the architecture and push them to the Docker Hub. 
+After all images has been pushed, create a manifest file and push them as :latest image to the Docker Hub.
 
-**Create and push manifest**
+**Create and push manifest file**
 ```
 docker manifest create --amend \
     jackgruber/manifest:latest \
@@ -18,7 +18,7 @@ docker manifest create --amend \
 docker manifest push jackgruber/manifest:latest
 ```
 
-You can inspect a manifest throu folow command:
+You can inspect a manifest through follow command:
 ```
 docker manifest inspect jackgruber/manifest
 ```
