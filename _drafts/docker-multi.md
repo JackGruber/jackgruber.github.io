@@ -24,9 +24,8 @@ docker manifest inspect jackgruber/manifest
 ```
 <img src="/img/posts/drafts/manifest_inspect.jpg">
 
+Now the matching version of the architecture is loaded at ```docker run jackgruber/manifest``` command.
 
 At the moment the manifest command is experimental and must be enabled.
 For enabling this, edit the ```~/.docker/config.json``` and add following option ```"experimental": "enabled"```.
 <img src="/img/posts/drafts/config.json.png">
-
-
