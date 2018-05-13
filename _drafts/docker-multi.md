@@ -25,6 +25,6 @@ docker manifest inspect jackgruber/manifest
 
 At the moment the manifest command is experimental and must be enabled.
 For enabling this, edit the ```~/.docker/config.json``` and add following option ```"experimental": "enabled"```.
-<img /img/posts/drafts/config.json.png>
+<img src="/img/posts/drafts/config.json.png">
 
 
