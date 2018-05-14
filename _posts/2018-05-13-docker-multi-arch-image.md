@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Push a multi architecture image to Docker Hub
-show-img: false
+
 tags: [docker, howto]
 image: /img/docker.png
 bigimg: "/img/head/container2.jpg"
