@@ -28,7 +28,7 @@ docker manifest inspect jackgruber/manifest
 
 Now the matching version for the architecture is loaded with the ```docker run jackgruber/manifest``` command.
 
-
+ 
 ## Enable experimental mode
 At the moment the manifest command is experimental and must be enabled.
 For enabling this, edit the ```~/.docker/config.json``` and add following option ```"experimental": "enabled"```.
