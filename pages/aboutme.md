@@ -47,7 +47,8 @@ Firewall ([Palo Alto Networks](https://www.paloaltonetworks.com/))
 Manufacturing IT, MES, I4.0 Solutions (BhP/TEF-EAT31)
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2016-02 to 2018-03 <i class="fa fa-building-o" aria-hidden="true"></i> [AZ Marketing und Service GmbH](https://www.all-in.de/) as **IT project manager** (Subsidiary of Allgäuer Zeitungverlag GmbH)
-My field of work included administration of **network**, **storage** and **server systems**
+AZ Marketing und Service Gmbh is the IT service provider for the whole group.  
+My responsibilities included **network**, **storage** and **server systems** administration.
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2006-07 to 2016-01 <i class="fa fa-building-o" aria-hidden="true"></i> [AZ Druck und Datentechnik GmbH](https://www.az-druck.de/) as **Systemoperator** (Subsidiary of Allgäuer Zeitungverlag GmbH)
 In the sheetfed offset printing plant I was responsible for the administration of **network**, **storage** and **server systems**, as well as for the group environment. 
