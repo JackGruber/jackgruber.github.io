@@ -36,3 +36,18 @@ For enabling this, edit the ```~/.docker/config.json``` and add following option
 ## manifest blob unknown
 ![manifest blob unknown #2](/img/posts/2018-05-13/bloberror.jpg)  
 If you get follow error, delete the corresponding folder for the manifest in ```~/.docker/manifests/``` an create the manifest again.
+
+## manifest blob unknown
+![manifest blob unknown #2](/img/posts/2018-05-13/bloberror.jpg)  <space><space>
+If you get follow error, delete the corresponding folder for the manifest in ```~/.docker/manifests/``` an create the manifest again.
+
+## manifest blob unknown
+![manifest blob unknown #2](/img/posts/2018-05-13/bloberror.jpg)
+
+If you get follow error, delete the corresponding folder for the manifest in ```~/.docker/manifests/``` an create the manifest again.
+
+## manifest blob unknown
+![manifest blob unknown #2](/img/posts/2018-05-13/bloberror.jpg)
+
+
+If you get follow error, delete the corresponding folder for the manifest in ```~/.docker/manifests/``` an create the manifest again.
