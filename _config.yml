@@ -119,7 +119,7 @@ social-network-links:
 
 # --- Misc --- #
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-disqus: "JackGruber"
+#disqus: "JackGruber"
 
 # Facebook App ID
 # fb_app_id: ""
