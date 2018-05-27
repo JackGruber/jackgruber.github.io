@@ -12,5 +12,5 @@ Warning
 {: .box-note}
 Note
 
-{: .box-note class="icon-yellow"}
+{: .box-note .icon-yellow}
 Icon Note
