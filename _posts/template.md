@@ -44,7 +44,7 @@ Warning
 {: .box-note}
 Note
 
-{: .box-note icon-yellow}
-Icon Note
+{: .box-error}
+Error
 
 
