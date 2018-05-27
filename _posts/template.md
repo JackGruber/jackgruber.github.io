@@ -37,3 +37,14 @@ Links
 [YAML settings](https://github.com/daattali/beautiful-jekyll#yaml-front-matter-parameters)
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links
+
+{: .box-warning}
+Warning
+
+{: .box-note}
+Note
+
+{: .box-note icon-yellow}
+Icon Note
+
+
