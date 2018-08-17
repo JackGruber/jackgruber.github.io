@@ -99,7 +99,6 @@ social-network-links:
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
 #url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
-url-pretty: "Datenschutz"  # eg. "pages/datenschutz.md"
 
 # --- Web Statistics Section --- #
 
