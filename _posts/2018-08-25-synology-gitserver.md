@@ -5,7 +5,9 @@ tags: [git, synology]
 bigimg: "/img/head/console.jpg"
 ---
 
-Short HowTo to install and configure of a **Git Server** on a **Synology NAS** with DSM 6.2.  
+Short HowTo to install and configure of a **Git Server** on a **Synology NAS** with DSM 6.2.
+
+{: .box-warning}
 For the normal work no SSH login or a admin account is needed!
 
 ## 1. Installing Git Server
