@@ -23,7 +23,8 @@ Microsoft Windows XP-10 &bull; a little Linux
 #### <i class="fa fa-cloud" aria-hidden="true"></i> Cloud
 Software Virtualization ([VMware](https://www.vmware.com/) ThinApp) &bull; 
 Hypervisor ([VMware](https://www.vmware.com/) ESX, [Microsoft](https://www.microsoft.com) Hyper-V) &bull;
-Virtual Desktop Infrastructure ([VMware](https://www.vmware.com/) VDI - Horizon)
+Virtual Desktop Infrastructure ([VMware](https://www.vmware.com/) VDI - Horizon) &bull;
+Operating System Level virtualization ([Docker](https://www.docker.com/))
 
 #### <i class="fa fa-area-chart" aria-hidden="true"></i> Monitoring
 Log managment ([Splunk](https://www.splunk.com/)) &bull;
