@@ -12,7 +12,7 @@
             {%- elsif curkey == 'yelp' -%}
               <a href="https://{{ site.social-network-links[curkey] }}.yelp.com" title="{{ element.name }}">
             {%- else -%}
-              <a href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}">
+              <a target="_blank" href="{{element.baseURL}}{{ site.social-network-links[curkey] }}" title="{{ element.name }}">
             {%- endif -%}
                 <span class="fa-stack fa-lg" aria-hidden="true">
                   <i class="fa fa-circle fa-stack-2x"></i>
