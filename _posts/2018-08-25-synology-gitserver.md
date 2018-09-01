@@ -27,7 +27,7 @@ git init --bare --shared _template.git
 
 
 ## 3.1 Start a new empty project on your Computer
-1. Copy the Folder `_template.git` name it for your project (Here in the example *newproject.git*) 
+1. Copy the Folder `_template.git` and name it for your project (Here in the example *newproject.git*) 
 <img src="/img/posts/2018-08-25/copytemplate.jpg">
 2. Clone the project to your computer
 ```
@@ -35,7 +35,7 @@ git clone ssh://<USERNAME>@<SYNOLOGYNAME>/volume1/git/newproject.git
 ```
 
 ## 3.2 Use a existing project and push it to the Synology
-1. Copy the Folder `_template.git` name it for your project (Here in the example *localproject.git*)
+1. Copy the Folder `_template.git` and name it for your project (Here in the example *localproject.git*)
 2. Initialize the project on your computer and push it to the Synology
 ```
 git init 
