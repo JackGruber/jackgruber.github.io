@@ -25,7 +25,7 @@ title: JackGruber
 navbar-links:
   Blog:
     - Posts: "blog"
-    - Tags: "blog/tags"
+    - Tags: "tags"
   About Me: "pages/aboutme"
 nav-search: "pages/search"
 

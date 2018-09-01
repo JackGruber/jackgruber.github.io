@@ -42,6 +42,11 @@ SD-WAN ([silver peak](https://www.silver-peak.com/)) &bull;
 Network Access Control ([Extreme Networks](https://www.extremenetworks.com/) Policy and NAC [802.1x] ) &bull;
 Firewall ([Palo Alto Networks](https://www.paloaltonetworks.com/))
 
+
+
+ 
+<br/>
+<br/>
 ### <i class="fa fa-briefcase" aria-hidden="true"></i> Experience
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2018-04 - ????-?? <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH](https://www.bosch.de/) as **IT Administrator** Manufacturing IT
@@ -54,6 +59,10 @@ My responsibilities included **network**, **storage** and **server systems** adm
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2006-07 to 2016-01 <i class="fa fa-building-o" aria-hidden="true"></i> [AZ Druck und Datentechnik GmbH](https://www.az-druck.de/) as **Systemoperator** (Subsidiary of Allgäuer Zeitungverlag GmbH)
 In the sheetfed offset printing plant I was responsible for the administration of **network**, **storage** and **server systems**, as well as for the group environment. 
 
+
+
+<br/>
+<br/>
 ### <i class="fa fa-graduation-cap" aria-hidden="true"></i> Education
 
 I successfully finished two undergraduate trainings as **State-certified information- and communication-technical assistant** and **IT specialist system integration**.
