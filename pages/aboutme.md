@@ -18,7 +18,7 @@ Arduino
 
 #### <i class="fa fa-terminal" aria-hidden="true"></i> Operating Systems
 Microsoft Windows Server NT4, 2000 - 2016 &bull;
-Microsoft Windows XP-10 &bull; a little Linux
+Microsoft Windows XP-10 &bull; a little bit Linux
 
 #### <i class="fa fa-cloud" aria-hidden="true"></i> Cloud
 Software Virtualization ([VMware](https://www.vmware.com/) ThinApp) &bull; 
