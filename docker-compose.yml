@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  blog:
+    build: .
+    #image: testblog
+    ports:
+      - "4000:4000/tcp"
+    volumes:
+      - C:/git/meine/jackgruber.github.io:/srv/jekyll
+    networks:
+      front:
+
+networks:
+  front:
+    driver: bridge
