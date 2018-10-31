@@ -30,12 +30,13 @@ To prevent this, you can specify in the `/etc/docker/daemon.json` the network ar
 
 
 To test the configuration, 50 networks were created and their subnet displayed and deleted.
+{% raw %}
 ```
 for i in {1..50}; do docker network create net-$i; done
 for i in $(docker network ls -q); do docker network inspect --format='{{.Name}} {{.IPAM.Config}}' $i; done
 for i in {1..50}; do docker network rm net-$i; done
 ```
- 
+{% endraw %}
 
 {: .box-warning}
 This option is only available since version 18.06!
