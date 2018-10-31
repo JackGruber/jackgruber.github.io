@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Git Server on Synology NAS
-tags: [git, synology]
+tags: [git, synology, howto]
 bigimg: "/img/head/console.jpg"
 ---
 
