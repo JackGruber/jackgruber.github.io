@@ -9,7 +9,7 @@ css: "/css/search.css"
 <ul id="results-container"></ul>
 
 <!-- script pointing to jekyll-search.js -->
-<script src="{{ site.baseurl }}/simple-jekyll-search.js"></script>
+<script src="{{ site.baseurl }}/js/simple-jekyll-search.js"></script>
 
 <script>
 SimpleJekyllSearch({
