@@ -4,21 +4,22 @@ title: "Search site"
 css: "/css/search.css"
 ---
 
-# Search
+<!-- HTML elements for search -->
+<input type="text" id="search-input" placeholder="Search blog posts..">
+<ul id="results-container"></ul>
 
-<div id="google-custom-search">
+<!-- script pointing to jekyll-search.js -->
+<script src="{{ site.baseurl }}/simple-jekyll-search.js"></script>
+
 <script>
-  (function() {
-    var cx = '015474832622011299309:rztlgfhd2em';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  json: '/search.json',
+  searchResultTemplate: '<li><a href="{{ site.url }}{url}">{title}</a></br>{info}</br>{preview}</br></br></li>',
+  noResultsText: 'Sorry no search result',
+  limit: 10,
+  fuzzy: false
+})
 </script>
-<gcse:searchbox></gcse:searchbox>
-<gcse:searchresults></gcse:searchresults>
-</div>
 
