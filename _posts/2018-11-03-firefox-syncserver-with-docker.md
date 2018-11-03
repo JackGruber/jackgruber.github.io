@@ -130,4 +130,10 @@ Now you can login to your Firefox account and the data is syncronized to your ow
 * [Mozilla Syncserver Git repository](https://github.com/mozilla-services/syncserver)
 * [Official howto from Mozilla](https://docs.services.mozilla.com/howtos/run-sync-1.5.html)
 * [Nginx Docker Git repository](https://github.com/nginxinc/docker-nginx)
+
+
+{: .box-error}
+Firefox for Android Version 62.0.3 ignore the Port in `identity.sync.tokenserver.uri`  
+[Bugzilla 1482462](https://bugzilla.mozilla.org/show_bug.cgi?id=1482462)
+
  
