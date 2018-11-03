@@ -14,19 +14,4 @@ layout: null
       "preview"  : {{ post.content | strip_html | xml_escape | truncatewords: site.excerpt_length | jsonify }}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
-  ,
-  {% for page in site.pages %}
-   {
-     {% if page.title != nil %}
-        "title"    : "{{ page.title | escape }}",
-        "subtitle" : "{{ page.title | escape }}",
-        "category" : "{{ page.category }}",
-        "tags"     : "{{ page.tags | join: ', ' }}",
-        "url"      : "{{ site.baseurl }}{{ page.url }}",
-        "info"     : "Site: ",
-        "content"  : {{ page.content | strip_html | xml_escape | jsonify }},
-        "preview"  : {{ page.content | strip_html | xml_escape | truncatewords: site.excerpt_length | jsonify }}
-     {% endif %}
-   } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
 ]
