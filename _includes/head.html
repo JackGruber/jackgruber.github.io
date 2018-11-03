@@ -113,7 +113,9 @@
   <meta name="twitter:description" content="{{ page.content | strip_html | xml_escape | truncatewords: 50 }}">
   {% endif %}
 
-  {% if page.share-img %}
+  {% if page.image and (layout.show-avatar or page.show-avatar) and page.show-img %}
+  <meta name="twitter:image" content="{{ site.url }}{{ page.image }}" />
+  {% elsif page.share-img %}
   <meta name="twitter:image" content="{{ page.share-img }}" />
   {% elsif site.avatar %}
   <meta name="twitter:image" content="{{ site.url }}{{ site.avatar }}" />
