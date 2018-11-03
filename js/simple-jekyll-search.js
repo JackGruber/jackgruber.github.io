@@ -124,6 +124,8 @@ function LiteralSearchStrategy () {
     for (var i = 0; i < search.length; i++) {
         if(str.toLowerCase().indexOf(search[i].toLowerCase()) == -1) { 
             match = false
+            //break
+            alert("no")
         }
     }
 
