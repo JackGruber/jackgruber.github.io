@@ -1,5 +1,5 @@
 /*!
-  * Simple-Jekyll-Search v1.6.3 (https://github.com/christian-fei/Simple-Jekyll-Search)
+  * Simple-Jekyll-Search v1.7.2 (https://github.com/christian-fei/Simple-Jekyll-Search)
   * Copyright 2015-2018, Christian Fei
   * Licensed under the MIT License.
   */
@@ -114,21 +114,14 @@ var _$LiteralSearchStrategy_6 = new LiteralSearchStrategy()
 
 function LiteralSearchStrategy () {
   this.matches = function (str, crit) {
-    if (typeof str !== 'string') {
-      return false
-    }
-    str = str.trim()
-    
-    var search = crit.split(" ")
-    var match = true
-    for (var i = 0; i < search.length; i++) {
-        if(str.toLowerCase().indexOf(search[i].toLowerCase()) == -1) { 
-            match = false
-            break
-        }
-    }
+    if (!str) return false
 
-    return match
+    str = str.trim().toLowerCase()
+    crit = crit.trim().toLowerCase()
+
+    return crit.split(' ').filter(function (word) {
+      return str.indexOf(word) >= 0
+    }).length === crit.split(' ').length
   }
 }
 
@@ -281,11 +274,9 @@ var _$utils_9 = {
 function merge (defaultParams, mergeParams) {
   var mergedOptions = {}
   for (var option in defaultParams) {
-    if (Object.prototype.hasOwnProperty.call(defaultParams, option)) {
-      mergedOptions[option] = defaultParams[option]
-      if (typeof mergeParams[option] !== 'undefined') {
-        mergedOptions[option] = mergeParams[option]
-      }
+    mergedOptions[option] = defaultParams[option]
+    if (typeof mergeParams[option] !== 'undefined') {
+      mergedOptions[option] = mergeParams[option]
     }
   }
   return mergedOptions
@@ -332,9 +323,6 @@ var _$src_8 = {};
   })
   /* removed: var _$utils_9 = require('./utils') */;
 
-  /*
-    Public API
-  */
   window.SimpleJekyllSearch = function (_options) {
     var errors = optionsValidator.validate(_options)
     if (errors.length > 0) {
@@ -363,13 +351,6 @@ var _$src_8 = {};
     return {
       search: search
     }
-  }
-
-  // For backwards compatibility
-  window.SimpleJekyllSearch.init = window.SimpleJekyllSearch
-
-  if (typeof window.SimpleJekyllSearchInit === 'function') {
-    window.SimpleJekyllSearchInit.call(this, window.SimpleJekyllSearch)
   }
 
   function initWithJSON (json) {
@@ -407,16 +388,17 @@ var _$src_8 = {};
   function search (query) {
     if (isValidQuery(query)) {
       emptyResultsContainer()
-      render(_$Repository_4.search(query))
+      render(_$Repository_4.search(query), query)
     }
   }
 
-  function render (results) {
+  function render (results, query) {
     var len = results.length
     if (len === 0) {
       return appendToResultsContainer(options.noResultsText)
     }
     for (var i = 0; i < len; i++) {
+      results[i].query = query
       appendToResultsContainer(_$Templater_7.compile(results[i]))
     }
   }
