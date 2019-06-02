@@ -50,7 +50,7 @@ Firewall ([Palo Alto Networks](https://www.paloaltonetworks.com/))
 ### <i class="fa fa-briefcase" aria-hidden="true"></i> Experience
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2018-04 - ????-?? <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH](https://www.bosch.de/) as **IT Administrator** Manufacturing IT
-Manufacturing IT, MES, I4.0 Solutions (BhP/TEF-EAT31) 
+Manufacturing IT, MES, I4.0 Solutions (BhP/TEF-EAT3-MES) 
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2016-02 to 2018-03 <i class="fa fa-building-o" aria-hidden="true"></i> [AZ Marketing und Service GmbH](https://www.all-in.de/) as **IT project manager** (Subsidiary of Allgäuer Zeitungverlag GmbH)
 AZ Marketing und Service Gmbh is the IT service provider for the whole group.  
