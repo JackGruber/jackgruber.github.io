@@ -8,8 +8,9 @@ image: /img/posts/2019-06-07/solokey.jpg
 bigimg: "/img/head/security.jpg"
 ---
 Github currently supports hardware security keys (SoloKeys, Yubico, ...) as second factor only with Google Chrome but not with Firefox,
-although Firefox supports U2F and on other sites this also works flawlessly.  
-<img src="/img/posts/2019-06-07/github_error.jpg">
+although Firefox supports U2F and on other sites this also works flawlessly.   
+> This browser doesn't support the FIDO U2F standard yet.
+<img src="/img/posts/2019-06-07/github_error.jpg">  
 
 This can be bypassed by pressenting Github a user agent from Chrome.
 
