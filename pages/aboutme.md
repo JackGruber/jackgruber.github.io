@@ -13,7 +13,8 @@ PowerShell &bull;
 AutoIt &bull; 
 PHP &bull; 
 JavaScript &bull;
-Arduino
+Arduino &bull;
+Python
 ... 
 
 #### <i class="fa fa-terminal" aria-hidden="true"></i> Operating Systems
