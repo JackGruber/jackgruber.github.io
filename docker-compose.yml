@@ -7,6 +7,9 @@ services:
       - "4000:4000/tcp"
     volumes:
       - C:/git/meine/jackgruber.github.io:/srv/jekyll
+    environment:
+      - JEKYLL_ENV=docker
+    command: jekyll serve --config  _config.yml,_config.docker.yml
     networks:
       front:
 
