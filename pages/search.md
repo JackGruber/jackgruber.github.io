@@ -1,7 +1,6 @@
 ---
 layout: page
 cover-img: "/assets/img/head/search.jpg"
-css: "/assets/css/search.css"
 ---
 
 <!-- HTML elements for search -->
