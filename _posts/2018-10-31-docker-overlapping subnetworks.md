@@ -3,7 +3,7 @@ layout: post
 title: Overlapping subnetworks or how to change Docker default subnet size?
 show-img: true
 tags: [docker, howto, error, troubleshooting, network]
-image: /assets/img/docker.png
+thumbnail-img: /assets/img/docker.png
 cover-img: "/assets/img/head/container.jpg"
 ---
 

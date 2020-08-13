@@ -3,7 +3,7 @@ layout: post
 title: First Post
 #subtitle: ... or not to be?
 tags: [code, infos]
-image: /img/hello_world.jpeg
+thumbnail-img: /img/hello_world.jpeg
 show-img: true
 gh-repo: JackGruber/docker_dustcloud
 gh-badge: [star, watch, fork, follow]

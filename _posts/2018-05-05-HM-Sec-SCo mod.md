@@ -4,7 +4,7 @@ title: HM-Sec-SCo Umbau auf externen Schalter / Reedkontakt
 tags: [homematic, diy, home automation]
 gh-repo: JackGruber/Homematic_HM-Sec-SCo_Umbau
 gh-badge: [star, watch, fork, follow]
-image: https://raw.githubusercontent.com/JackGruber/Homematic_HM-Sec-SCo_Umbau/master/img/umbau.jpg
+thumbnail-img: https://raw.githubusercontent.com/JackGruber/Homematic_HM-Sec-SCo_Umbau/master/img/umbau.jpg
 show-img: false
 ---
 
