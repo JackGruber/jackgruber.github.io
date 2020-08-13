@@ -4,7 +4,7 @@ title: ESP32 DeepSleep and LoraWAN OTAA join
 subtitle: 
 show-img: true
 tags: [ESP32, LoraWAN, Arduino, µC, LMIC, TTN]
-bigimg: "/img/head/arduino.jpg"
+cover-img: "/assets/img/head/arduino.jpg"
 ---
 
 When the ESP32 goes into DeepSleep and wake up, it will not restart the code execution from where it entered DeepSleep, 

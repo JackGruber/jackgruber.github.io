@@ -4,7 +4,7 @@ title: Low power Arduino Pro Mini
 subtitle: 
 show-img: true
 tags: [howto, hack, Arduino, µC, Hardware]
-bigimg: "/img/head/arduino.jpg"
+cover-img: "/assets/img/head/arduino.jpg"
 ---
 For various projects where a long runtime with batteries is important I use a modify `Arduino Pro Mini 328 3.3V/8Mhz (ATmega328P)`.
 As an example a flashing sketch is used, which turns the LED on for 1 second and off for 8 seconds. 

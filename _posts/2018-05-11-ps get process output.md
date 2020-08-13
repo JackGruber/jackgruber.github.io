@@ -3,7 +3,7 @@ layout: post
 title: "Capture output from command line tools with PowerShell"
 tags: [powershell, code, process]
 category: PowerShell
-bigimg: "/img/head/code.jpg"
+cover-img: "/assets/img/head/code.jpg"
 ---
 
 There are several ways to execute an external process and capture and process its command output in PowerShell.

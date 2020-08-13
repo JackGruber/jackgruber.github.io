@@ -3,7 +3,7 @@ layout: post
 title: "Check group membership with PowerShell"
 tags: [powershell, code]
 category: PowerShell
-bigimg: "/img/head/code.jpg"
+cover-img: "/assets/img/head/code.jpg"
 ---
 
 Check group membership from the current user without Active Directory PowerShell module.
