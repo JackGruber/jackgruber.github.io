@@ -1,6 +1,5 @@
 ---
 layout: page
-title: ""
 cover-img: "/assets/img/head/search.jpg"
 css: "/assets/css/search.css"
 ---
