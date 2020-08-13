@@ -13,6 +13,15 @@
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
       {%- for link in site.navbar-links -%}
+        {%- if link[0] == "Search" %}
+          <li class="nav-item">
+            <a href="{{ link[1] | relative_url }}" class="nav-link" title="Search">
+              <span class="fa fa-search nav-search-icon"></span>
+            </a>
+          </li>
+          {% continue %}
+        {%- endif -%}
+      
         {%- if link[1].first %}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
