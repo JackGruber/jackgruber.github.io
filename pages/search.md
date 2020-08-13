@@ -1,7 +1,7 @@
 ---
-layout: default
-title: "Search site"
-css: "/css/search.css"
+layout: page
+cover-img: "/assets/img/head/search.jpg"
+css: "/assets/css/search.css"
 ---
 
 <!-- HTML elements for search -->
@@ -9,7 +9,7 @@ css: "/css/search.css"
 <ul id="results-container"></ul>
 
 <!-- script pointing to jekyll-search.js -->
-<script src="{{ site.baseurl }}/js/simple-jekyll-search.js"></script>
+<script src="{{ site.baseurl }}/assets/js/simple-jekyll-search.js"></script>
 
 <script>
 SimpleJekyllSearch({

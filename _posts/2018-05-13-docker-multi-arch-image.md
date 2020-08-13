@@ -3,8 +3,8 @@ layout: post
 title: Push a multi architecture image to Docker Hub
 show-img: true
 tags: [docker, howto]
-image: /img/docker.png
-bigimg: "/img/head/container.jpg"
+thumbnail-img: /assets/img/docker.png
+cover-img: "/assets/img/head/container.jpg"
 ---
 To create Docker images with multi architecture support, create your Docker image as usual with a tag 
 for the architecture and push them to the Docker Hub. 

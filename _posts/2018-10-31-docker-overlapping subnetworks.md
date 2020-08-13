@@ -3,8 +3,8 @@ layout: post
 title: Overlapping subnetworks or how to change Docker default subnet size?
 show-img: true
 tags: [docker, howto, error, troubleshooting, network]
-image: /img/docker.png
-bigimg: "/img/head/container.jpg"
+thumbnail-img: /assets/img/docker.png
+cover-img: "/assets/img/head/container.jpg"
 ---
 
 Several services already running were no longer available from subnets after a new container was created using `docker-compose`.   

@@ -3,8 +3,8 @@ layout: post
 title: Setup your own Firefox Sync Server with Docker
 show-img: true
 tags: [docker, howto, network, cloud]
-image: /img/cloud.png
-bigimg: "/img/head/cloud.jpg"
+thumbnail-img: /assets/img/cloud.png
+cover-img: "/assets/img/head/cloud.jpg"
 ---
 If you don't want your bookmarks, tabs, cronics, ... to be stored by Firefox in the Firefox cloud, you can run your self-hosted Firefox Sync server.
 After that, only the Mozilla-hosted accounts server ([https://accounts.firefox.com](https://accounts.firefox.com)) is used, but the data is stored locally.
@@ -41,7 +41,7 @@ version: '3.7'
 services:
   syncserver:
      # https://github.com/mozilla-services/syncserver.git
-     image: syncserver
+     thumbnail-img: syncserver
      volumes:
        - /opt/ff-syncserver/db/:/tmp
      environment:
@@ -59,7 +59,7 @@ services:
            - ffsync
   nginx:
     # https://github.com/nginxinc/docker-nginx
-    image: nginx:alpine
+    thumbnail-img: nginx:alpine
     ports:
       - "5001:443/tcp"
     volumes:

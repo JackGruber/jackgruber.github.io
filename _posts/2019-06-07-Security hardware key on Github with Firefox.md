@@ -4,8 +4,8 @@ title: Security hardware key on Github with Firefox
 subtitle: "Spoof User Agent in Firefox"
 show-img: true
 tags: [howto, firefox, U2F, SoloKeys, security, FIDO U2F, 2FA]
-image: /img/posts/2019-06-07/solokey.jpg
-bigimg: "/img/head/security.jpg"
+thumbnail-img: /img/posts/2019-06-07/solokey.jpg
+cover-img: "/assets/img/head/security.jpg"
 ---
 Github currently supports hardware security keys (SoloKeys, Yubico, ...) as second factor only with Google Chrome but not with Firefox,
 although Firefox supports U2F and on other sites this also works flawlessly.   

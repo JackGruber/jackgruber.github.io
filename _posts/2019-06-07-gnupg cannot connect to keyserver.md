@@ -4,7 +4,7 @@ title: "gnupg cannot connect to keyserver"
 subtitle: "keyserver receive failed: Connection refused"
 tags: [docker, error, troubleshooting]
 category: troubleshooting
-bigimg: "/img/head/console.jpg"
+cover-img: "/assets/img/head/console.jpg"
 ---
 On a docker project where i had to add gnupg keys i always got an error `keyserver receive failed: Connection refused`.
 After a while of troubleshooting, i realized it's not a connection or DNS problem. 
