@@ -22,6 +22,8 @@ description: A virtual proof that I'm awesome
 # Your name to show in the footer
 author: Gruber Alexander
 
+footer-extra: footer-extra.html
+
 # --- List of links in the navigation bar --- #
 
 navbar-links:
