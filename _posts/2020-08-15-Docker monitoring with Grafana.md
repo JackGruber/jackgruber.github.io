@@ -7,6 +7,8 @@ cover-img: "/assets/img/head/container.jpg"
 #thumbnail-img: /assets/img/docker.png
 ---
 
+<img src="../img/posts/2020-08-15/overview.jpg">
+
 In this blog, we are implementing monitoring for Docker containers using Docker images.
 We will use the following open-source options for the monitoring task:
 
