@@ -128,3 +128,6 @@ void loop()
 {: .box-error}
 The duty cycle in LMIC is based on micros() and this is also resedted!
 Therefore the dutycycle is not yet covered in this example!
+
+{: .box-note}
+[ESP32 TTN environmental sensor](https://github.com/JackGruber/esp32_ttn_environmental_sensor) is a project from me where the code is used.
