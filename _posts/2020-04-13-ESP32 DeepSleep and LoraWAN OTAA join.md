@@ -1,25 +1,24 @@
 ---
 layout: post
 title: ESP32 DeepSleep and LoraWAN OTAA join
-subtitle: 
+subtitle:
 show-img: true
 tags: [ESP32, LoraWAN, Arduino, µC, LMIC, TTN]
 cover-img: "/assets/img/head/arduino.jpg"
 ---
 
-When the ESP32 goes into DeepSleep and wake up, it will not restart the code execution from where it entered DeepSleep, 
-like an ATmega witch restarts code execution at the same place including all set variables. 
+When the ESP32 goes into DeepSleep and wake up, it will not restart the code execution from where it entered DeepSleep,
+like an ATmega witch restarts code execution at the same place including all set variables.
 The ESP32 starts in the Setup function an reinitializes all variables, this means that all values that have been saved before are lost.  
-In combination with LoraWAN, OTAA join and the LMIC library, this results in the ESP32 making a join after each DeepSleep. 
+In combination with LoraWAN, OTAA join and the LMIC library, this results in the ESP32 making a join after each DeepSleep.
 This costs unnecessary power in battery operation and the limited LoraWAN Join requests for each device, additionally this is effected the limited airtime.
 
-To prevent this, we have to cache some variables and reload them on reboot. 
-Storing the data in the EEPROM on the ESP32 is a bad idea because the ESP32 emulates the EEPROM in the flash and the flash memory cells have a limited life span for write operations. 
-On the ESP32 we use the RTC memory, witch holds the content during DeepSleep. 
+To prevent this, we have to cache some variables and reload them on reboot.
+Storing the data in the EEPROM on the ESP32 is a bad idea because the ESP32 emulates the EEPROM in the flash and the flash memory cells have a limited life span for write operations.
+On the ESP32 we use the RTC memory, witch holds the content during DeepSleep.
 To use RTC memoy vor a variable we declare the variable with a preefix `RTC_DATA_ATTR` as an example `RTC_DATA_ATTR int bootcount = 0`, the variable bootcount is now preserved during DeepSleep.
 
-
-To store the LMIC configurations we have to define the following variables on a global scope. 
+To store the LMIC configurations we have to define the following variables on a global scope.
 
 ```c++
 RTC_DATA_ATTR u4_t RTC_LORAWAN_netid = 0;
@@ -43,7 +42,7 @@ RTC_DATA_ATTR band_t RTC_LORAWAN_bands[MAX_BANDS];
 RTC_DATA_ATTR u2_t RTC_LORAWAN_channelMap;
 ```
 
-To following functions are for storing and loading the variables. 
+To following functions are for storing and loading the variables.
 
 ```c++
 void LMICSaveVarsToRTC()
@@ -59,7 +58,7 @@ void LMICSaveVarsToRTC()
     RTC_LORAWAN_seqnoUp = LMIC.seqnoUp;
     RTC_LORAWAN_adrTxPow = LMIC.adrTxPow;
     RTC_LORAWAN_datarate = LMIC.datarate;
-    RTC_LORAWAN_txChnl = LMIC.txChnl;    
+    RTC_LORAWAN_txChnl = LMIC.txChnl;
     RTC_LORAWAN_adrAckReq = LMIC.adrAckReq;
     RTC_LORAWAN_rx1DrOffset = LMIC.rx1DrOffset;
     RTC_LORAWAN_rxDelay = LMIC.rxDelay;
@@ -86,30 +85,31 @@ void LMICLoadVarsFromRTC()
     memcpy(LMIC.channelFreq, RTC_LORAWAN_channelFreq, MAX_CHANNELS*sizeof(u4_t));
     memcpy(LMIC.channelDrMap, RTC_LORAWAN_channelDrMap, MAX_CHANNELS*sizeof(u2_t));
     memcpy(LMIC.channelDlFreq, RTC_LORAWAN_channelDlFreq, MAX_CHANNELS*sizeof(u4_t));
-    memcpy(LMIC.bands, RTC_LORAWAN_bands, MAX_BANDS*sizeof(band_t));    
+    memcpy(LMIC.bands, RTC_LORAWAN_bands, MAX_BANDS*sizeof(band_t));
     LMIC.channelMap = RTC_LORAWAN_channelMap;
 }
 ```
 
-After the `LMIC_reset()` we check if we need to load saved data. 
+After the `LMIC_reset()` we check if we need to load saved data.
+
 ```c++
 ...
 
 os_init();
 LMIC_reset();
 
-// Load the LoRa information from RTC 
+// Load the LoRa information from RTC
 if(RTC_LORAWAN_seqnoUp != 0) { LMICLoadVarsFromRTC(); }
 
 ...
 ```
 
-To check if we can go into DeepSleep, we set a var GOTO_DEEPSLEEP in the event `EV_TXCOMPLETE` 
+To check if we can go into DeepSleep, we set a var GOTO_DEEPSLEEP in the event `EV_TXCOMPLETE`
 and check in oure loop if we can go to DeepSleep.
 
 ```c++
 bool GOTO_DEEPSLEEP = false;
-void loop() 
+void loop()
 {
     os_runloop_once();
     int seconds = 300;
@@ -126,5 +126,5 @@ void loop()
 ```
 
 {: .box-error}
-The duty cycle in LMIC is based on micros() and this is also resedted! 
-Therefore the dutycycle is not yet covered in this example! 
+The duty cycle in LMIC is based on micros() and this is also resedted!
+Therefore the dutycycle is not yet covered in this example!
