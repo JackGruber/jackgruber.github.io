@@ -2,7 +2,7 @@
 layout: post
 title: Setup your own Firefox Sync Server with Docker
 show-img: true
-tags: [docker, howto, network, cloud]
+tags: [docker, howto, network, cloud, firefox]
 thumbnail-img: /assets/img/cloud.png
 cover-img: "/assets/img/head/cloud.jpg"
 ---
@@ -15,6 +15,9 @@ You can safely use the Mozilla-hosted Firefox Accounts server in combination wit
 {: .box-warning}
 Two docker containers are created, a Firefox Sync Server and an nginx proxy, which acts as a reverse SSL proxy. 
 Docker-compose is used to easily create and configure the containers. 
+
+{: .box-error}
+Update: 2020-08-29 With Firefox version 80 there have been some changes: [Own syncserver with Firefox 80](/2020-08-29-own-syncserver-with-firefox-80/)
 
 ## Build the Syncserver
 First you have to create a docker syncserver image. 
@@ -125,15 +128,12 @@ You need to change the sync server address on each Firefox installation.
 
 Now you can login to your Firefox account and the data is syncronized to your own syncserver.  
 
-
 ### Links:
+
 * [Mozilla Syncserver Git repository](https://github.com/mozilla-services/syncserver)
 * [Official howto from Mozilla](https://docs.services.mozilla.com/howtos/run-sync-1.5.html)
 * [Nginx Docker Git repository](https://github.com/nginxinc/docker-nginx)
 
-
 {: .box-error}
 Firefox for Android Version 62.0.3 ignore the Port in `identity.sync.tokenserver.uri`  
 [Bugzilla 1482462](https://bugzilla.mozilla.org/show_bug.cgi?id=1482462)
-
- 
