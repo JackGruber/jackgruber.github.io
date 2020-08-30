@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Own syncserver with Firefox 80
+title: Own syncserver with Firefox 80 (79 on Android)
 show-img: true
 tags: [firefox, howto, cloud]
 thumbnail-img: /assets/img/cloud.png
 cover-img: "/assets/img/head/cloud.jpg"
 ---
 
-Since the Firefox update to version 80 a few things have changed to be able to use your own syncserver as described in the blog post [Setup your own Firefox Sync Server with Docker](/2018-11-03-firefox-syncserver-with-docker/).
+Since the Firefox update to version 80 and 79 on android a few things have changed to be able to use your own syncserver as described in the blog post [Setup your own Firefox Sync Server with Docker](/2018-11-03-firefox-syncserver-with-docker/).
 
 ## Desktop
 
