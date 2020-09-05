@@ -11,6 +11,9 @@ Since the Firefox update to version 80 and 79 on android a few things have chang
 
 ## Desktop
 
+{: .box-warning}
+With syncserver version 1.9.0 (git commit: `21717e3` or docker digest: `bf581395981a`) the error is fixed and the workarround for Firefox Desktop is no longer needed.
+
 In addition to the `identity.sync.tokenserver.uri` settings for the syncserver URL, the following settings must be set to `false`.
 
 ```txt
@@ -32,3 +35,10 @@ So the procedure to enter the syncserver URL is now as follows:
 3. Click 5 times on to the Firefox logo until `Debug menue is enabled` appears
 4. Go back to settings
 5. Now you see under the Account options the option `Userdefined syncserver`, Enter your syncserver URL here.
+
+<br />
+<br />
+
+### Update
+
+2020-09-05 Add info about new syncserver version (workaround is no longer needed)
