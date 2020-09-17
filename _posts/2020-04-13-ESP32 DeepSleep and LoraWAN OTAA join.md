@@ -35,6 +35,7 @@ RTC_DATA_ATTR u1_t RTC_LORAWAN_txChnl;
 RTC_DATA_ATTR s2_t RTC_LORAWAN_adrAckReq;
 RTC_DATA_ATTR u1_t RTC_LORAWAN_rx1DrOffset;
 RTC_DATA_ATTR u1_t RTC_LORAWAN_rxDelay;
+RTC_DATA_ATTR u2_t RTC_LORAWAN_opmode;
 RTC_DATA_ATTR u4_t RTC_LORAWAN_channelFreq[MAX_CHANNELS];
 RTC_DATA_ATTR u2_t RTC_LORAWAN_channelDrMap[MAX_CHANNELS];
 RTC_DATA_ATTR u4_t RTC_LORAWAN_channelDlFreq[MAX_CHANNELS];
@@ -62,6 +63,7 @@ void LMICSaveVarsToRTC()
     RTC_LORAWAN_adrAckReq = LMIC.adrAckReq;
     RTC_LORAWAN_rx1DrOffset = LMIC.rx1DrOffset;
     RTC_LORAWAN_rxDelay = LMIC.rxDelay;
+    RTC_LORAWAN_opmode = LMIC.opmode;
     memcpy(RTC_LORAWAN_channelFreq, LMIC.channelFreq, MAX_CHANNELS*sizeof(u4_t));
     memcpy(RTC_LORAWAN_channelDrMap, LMIC.channelDrMap, MAX_CHANNELS*sizeof(u2_t));
     memcpy(RTC_LORAWAN_channelDlFreq, LMIC.channelDlFreq, MAX_CHANNELS*sizeof(u4_t));
@@ -82,6 +84,7 @@ void LMICLoadVarsFromRTC()
     LMIC.adrAckReq = RTC_LORAWAN_adrAckReq;
     LMIC.rx1DrOffset = RTC_LORAWAN_rx1DrOffset;
     LMIC.rxDelay = RTC_LORAWAN_rxDelay;
+    LMIC.opmode = RTC_LORAWAN_opmode;
     memcpy(LMIC.channelFreq, RTC_LORAWAN_channelFreq, MAX_CHANNELS*sizeof(u4_t));
     memcpy(LMIC.channelDrMap, RTC_LORAWAN_channelDrMap, MAX_CHANNELS*sizeof(u2_t));
     memcpy(LMIC.channelDlFreq, RTC_LORAWAN_channelDlFreq, MAX_CHANNELS*sizeof(u4_t));
@@ -90,7 +93,7 @@ void LMICLoadVarsFromRTC()
 }
 ```
 
-After the `LMIC_reset()` we check if we need to load saved data.
+After the `LMIC_reset()` we check if we need to load the saved data.
 
 ```c++
 ...
@@ -99,7 +102,14 @@ os_init();
 LMIC_reset();
 
 // Load the LoRa information from RTC
-if(RTC_LORAWAN_seqnoUp != 0) { LMICLoadVarsFromRTC(); }
+if(RTC_LORAWAN_seqnoUp != 0)
+{ 
+    LMICLoadVarsFromRTC();
+
+    // Clear Bandplan, because we can't track milis during deepsleep.
+    // Otherwise we get problems with DutyCycle
+    LMICbandplan_joinAcceptChannelClear();
+}
 
 ...
 ```
@@ -131,3 +141,7 @@ Therefore the dutycycle is not yet covered in this example!
 
 {: .box-note}
 [ESP32 TTN environmental sensor](https://github.com/JackGruber/esp32_ttn_environmental_sensor) is a project from me where the code is used.
+
+#### Updates
+
+* 2020-09-17 Add `LMICbandplan_joinAcceptChannelClear` to clear Bandplan after Wakeup and save/restore `RTC_LORAWAN_opmode`
