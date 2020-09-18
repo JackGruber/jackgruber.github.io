@@ -18,78 +18,29 @@ Storing the data in the EEPROM on the ESP32 is a bad idea because the ESP32 emul
 On the ESP32 we use the RTC memory, witch holds the content during DeepSleep.
 To use RTC memoy vor a variable we declare the variable with a preefix `RTC_DATA_ATTR` as an example `RTC_DATA_ATTR int bootcount = 0`, the variable bootcount is now preserved during DeepSleep.
 
-To store the LMIC configurations we have to define the following variables on a global scope.
+To store the LMIC configurations we have to define the following variable on a global scope.
 
 ```c++
-RTC_DATA_ATTR u4_t RTC_LORAWAN_netid = 0;
-RTC_DATA_ATTR devaddr_t RTC_LORAWAN_devaddr = 0;
-RTC_DATA_ATTR u1_t RTC_LORAWAN_nwkKey[16];
-RTC_DATA_ATTR u1_t RTC_LORAWAN_artKey[16];
-RTC_DATA_ATTR u1_t RTC_LORAWAN_dn2Dr;
-RTC_DATA_ATTR u1_t RTC_LORAWAN_dnConf;
-RTC_DATA_ATTR u4_t RTC_LORAWAN_seqnoDn;
-RTC_DATA_ATTR u4_t RTC_LORAWAN_seqnoUp = 0;
-RTC_DATA_ATTR s1_t RTC_LORAWAN_adrTxPow;
-RTC_DATA_ATTR s1_t RTC_LORAWAN_datarate;
-RTC_DATA_ATTR u1_t RTC_LORAWAN_txChnl;
-RTC_DATA_ATTR s2_t RTC_LORAWAN_adrAckReq;
-RTC_DATA_ATTR u1_t RTC_LORAWAN_rx1DrOffset;
-RTC_DATA_ATTR u1_t RTC_LORAWAN_rxDelay;
-RTC_DATA_ATTR u2_t RTC_LORAWAN_opmode;
-RTC_DATA_ATTR u4_t RTC_LORAWAN_channelFreq[MAX_CHANNELS];
-RTC_DATA_ATTR u2_t RTC_LORAWAN_channelDrMap[MAX_CHANNELS];
-RTC_DATA_ATTR u4_t RTC_LORAWAN_channelDlFreq[MAX_CHANNELS];
-RTC_DATA_ATTR band_t RTC_LORAWAN_bands[MAX_BANDS];
-RTC_DATA_ATTR u2_t RTC_LORAWAN_channelMap;
+RTC_DATA_ATTR lmic_t RTC_LMIC;
 ```
 
-To following functions are for storing and loading the variables.
+To following functions are for storing and loading the LMIC structure.
 
 ```c++
-void LMICSaveVarsToRTC()
+void SaveLMICToRTC()
 {
-    Serial.println(F("Save LMIC to RTC ..."));
-    RTC_LORAWAN_netid = LMIC.netid;
-    RTC_LORAWAN_devaddr = LMIC.devaddr;
-    memcpy(RTC_LORAWAN_nwkKey, LMIC.nwkKey, 16);
-    memcpy(RTC_LORAWAN_artKey, LMIC.artKey, 16);
-    RTC_LORAWAN_dn2Dr = LMIC.dn2Dr;
-    RTC_LORAWAN_dnConf = LMIC.dnConf;
-    RTC_LORAWAN_seqnoDn = LMIC.seqnoDn;
-    RTC_LORAWAN_seqnoUp = LMIC.seqnoUp;
-    RTC_LORAWAN_adrTxPow = LMIC.adrTxPow;
-    RTC_LORAWAN_datarate = LMIC.datarate;
-    RTC_LORAWAN_txChnl = LMIC.txChnl;
-    RTC_LORAWAN_adrAckReq = LMIC.adrAckReq;
-    RTC_LORAWAN_rx1DrOffset = LMIC.rx1DrOffset;
-    RTC_LORAWAN_rxDelay = LMIC.rxDelay;
-    RTC_LORAWAN_opmode = LMIC.opmode;
-    memcpy(RTC_LORAWAN_channelFreq, LMIC.channelFreq, MAX_CHANNELS*sizeof(u4_t));
-    memcpy(RTC_LORAWAN_channelDrMap, LMIC.channelDrMap, MAX_CHANNELS*sizeof(u2_t));
-    memcpy(RTC_LORAWAN_channelDlFreq, LMIC.channelDlFreq, MAX_CHANNELS*sizeof(u4_t));
-    memcpy(RTC_LORAWAN_bands, LMIC.bands, MAX_BANDS*sizeof(band_t));
-    RTC_LORAWAN_channelMap = LMIC.channelMap;
+    RTC_LMIC = LMIC;
 }
 
-void LMICLoadVarsFromRTC()
+void LoadLMICFromRTC()
 {
-    Serial.println(F("Load LMIC vars from RTC ..."));
-    LMIC_setSession(RTC_LORAWAN_netid, RTC_LORAWAN_devaddr, RTC_LORAWAN_nwkKey, RTC_LORAWAN_artKey);
-    LMIC.dn2Dr = RTC_LORAWAN_dn2Dr;
-    LMIC.dnConf = RTC_LORAWAN_dnConf;
-    LMIC.seqnoDn = RTC_LORAWAN_seqnoDn;
-    LMIC_setSeqnoUp(RTC_LORAWAN_seqnoUp);
-    LMIC_setDrTxpow(RTC_LORAWAN_datarate, RTC_LORAWAN_adrTxPow);
-    LMIC.txChnl = RTC_LORAWAN_txChnl;
-    LMIC.adrAckReq = RTC_LORAWAN_adrAckReq;
-    LMIC.rx1DrOffset = RTC_LORAWAN_rx1DrOffset;
-    LMIC.rxDelay = RTC_LORAWAN_rxDelay;
-    LMIC.opmode = RTC_LORAWAN_opmode;
-    memcpy(LMIC.channelFreq, RTC_LORAWAN_channelFreq, MAX_CHANNELS*sizeof(u4_t));
-    memcpy(LMIC.channelDrMap, RTC_LORAWAN_channelDrMap, MAX_CHANNELS*sizeof(u2_t));
-    memcpy(LMIC.channelDlFreq, RTC_LORAWAN_channelDlFreq, MAX_CHANNELS*sizeof(u4_t));
-    memcpy(LMIC.bands, RTC_LORAWAN_bands, MAX_BANDS*sizeof(band_t));
-    LMIC.channelMap = RTC_LORAWAN_channelMap;
+    LMIC = RTC_LMIC;
+
+    for (u1_t bi = 0; bi < MAX_BANDS; bi++)
+    {
+        LMIC.bands[bi].avail = 0;
+    }
+    LMIC.globalDutyAvail = 0;
 }
 ```
 
@@ -102,13 +53,9 @@ os_init();
 LMIC_reset();
 
 // Load the LoRa information from RTC
-if(RTC_LORAWAN_seqnoUp != 0)
+if(LMIC.seqnoUp != 0)
 { 
-    LMICLoadVarsFromRTC();
-
-    // Clear Bandplan, because we can't track milis during deepsleep.
-    // Otherwise we get problems with DutyCycle
-    LMICbandplan_joinAcceptChannelClear();
+    LoadLMICFromRTC();
 }
 
 ...
@@ -123,7 +70,7 @@ void loop()
 {
     os_runloop_once();
     int seconds = 300;
-    if(!os_queryTimeCriticalJobs(ms2osticksRound( (seconds*1000) - 1000 )))
+    if(!os_queryTimeCriticalJobs(ms2osticksRound( (seconds*1000) )))
     {
         Serial.println("Can sleep");
         if(GOTO_DEEPSLEEP == true)
@@ -135,13 +82,18 @@ void loop()
 }
 ```
 
+A complete example project can be found here [Git project with example code](https://github.com/JackGruber/ESP32-LMIC-DeepSleep-example/).
+
 {: .box-error}
-The duty cycle in LMIC is based on micros() and this is also resedted!
-Therefore the dutycycle is not yet covered in this example!
+The duty cycle in LMIC is based on micros() and this is also reseted!<br/>
+Therefore the dutycycle is not yet covered in this example!<br/>
+Please respect [Fair Access Policy and Maximum Duty Cycle limits](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle.html) !
 
 {: .box-note}
+
+[Git project with example code](https://github.com/JackGruber/ESP32-LMIC-DeepSleep-example/)
 [ESP32 TTN environmental sensor](https://github.com/JackGruber/esp32_ttn_environmental_sensor) is a project from me where the code is used.
 
 #### Updates
 
-* 2020-09-17 Add `LMICbandplan_joinAcceptChannelClear` to clear Bandplan after Wakeup and save/restore `RTC_LORAWAN_opmode`
+* 2020-09-18 Save and load complete LMIC structure and reset DutyCyle
