@@ -116,7 +116,7 @@ Please respect [Fair Access Policy and Maximum Duty Cycle limits](https://www.th
 
 {: .box-note}
 
-[Git project with example code](https://github.com/JackGruber/ESP32-LMIC-DeepSleep-example/)
+[Git project with example code](https://github.com/JackGruber/ESP32-LMIC-DeepSleep-example/) <br/>
 [ESP32 TTN environmental sensor](https://github.com/JackGruber/esp32_ttn_environmental_sensor) is a project from me where the code is used.
 
 #### Updates
