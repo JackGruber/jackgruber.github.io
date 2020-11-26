@@ -27,7 +27,7 @@ RTC_DATA_ATTR lmic_t RTC_LMIC;
 To following functions are for storing and loading the LMIC structure.
 
 ```c++
-void SaveLMICToRTC()
+void SaveLMICToRTC(int deepsleep_sec)
 {
     RTC_LMIC = LMIC;
     // EU Like Bands
@@ -100,6 +100,7 @@ void loop()
         Serial.println("Can sleep");
         if(GOTO_DEEPSLEEP == true)
         {
+            SaveLMICToRTC(seconds);
             esp_sleep_enable_timer_wakeup(seconds * 1000000);
             esp_deep_sleep_start();
         }
