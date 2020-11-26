@@ -30,17 +30,32 @@ To following functions are for storing and loading the LMIC structure.
 void SaveLMICToRTC()
 {
     RTC_LMIC = LMIC;
+    // EU Like Bands
+
+    //System time is resetted after sleep. So we need to calculate the dutycycle with a resetted system time
+    unsigned long now = millis();
+#if defined(CFG_LMIC_EU_like)
+    for(int i = 0; i < MAX_BANDS; i++) {
+        ostime_t correctedAvail = RTC_LMIC.bands[i].avail - ((now/1000.0 + deepsleep_sec ) * OSTICKS_PER_SEC);
+        if(correctedAvail < 0) {
+            correctedAvail = 0;
+        }
+        RTC_LMIC.bands[i].avail = correctedAvail;
+    }
+
+    RTC_LMIC.globalDutyAvail = RTC_LMIC.globalDutyAvail - ((now/1000.0 + deepsleep_sec ) * OSTICKS_PER_SEC);
+    if(RTC_LMIC.globalDutyAvail < 0) 
+    {
+        RTC_LMIC.globalDutyAvail = 0;
+    }
+#else
+    Serial.println("No DutyCycle recalculation function!")
+#endif
 }
 
 void LoadLMICFromRTC()
 {
     LMIC = RTC_LMIC;
-
-    for (u1_t bi = 0; bi < MAX_BANDS; bi++)
-    {
-        LMIC.bands[bi].avail = 0;
-    }
-    LMIC.globalDutyAvail = 0;
 }
 ```
 
@@ -65,6 +80,16 @@ To check if we can go into DeepSleep, we set a var GOTO_DEEPSLEEP in the event `
 and check in oure loop if we can go to DeepSleep.
 
 ```c++
+void onEvent(ev_t ev)
+{
+    ...
+    case EV_TXCOMPLETE:
+        GOTO_DEEPSLEEP = true;
+    ...
+}
+```
+
+```c++
 bool GOTO_DEEPSLEEP = false;
 void loop()
 {
@@ -85,8 +110,7 @@ void loop()
 A complete example project can be found here [Git project with example code](https://github.com/JackGruber/ESP32-LMIC-DeepSleep-example/).
 
 {: .box-error}
-The duty cycle in LMIC is based on micros() and this is also reseted!<br/>
-Therefore the dutycycle is not yet covered in this example!<br/>
+Correcting the dutycycle is only done in EU like band plans! <br/>
 Please respect [Fair Access Policy and Maximum Duty Cycle limits](https://www.thethingsnetwork.org/docs/lorawan/duty-cycle.html) !
 
 {: .box-note}
@@ -97,3 +121,4 @@ Please respect [Fair Access Policy and Maximum Duty Cycle limits](https://www.th
 #### Updates
 
 * 2020-09-18 Save and load complete LMIC structure and reset DutyCyle
+* 2020-11-26 Correct DutyCyle calculation for LMIC EU like band planes
