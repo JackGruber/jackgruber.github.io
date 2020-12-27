@@ -11,7 +11,7 @@ This year I tinkered with an environmental sensor, which should be solar powered
 
 The sensor should provide the following measured values:
 
-- Fine dust (SD011)
+- Fine dust (SDS011)
 - Temperature / Humidity / Air pressure (BME280)
 - UV Index (VEML6075)
 - LUX (TSL2591)
