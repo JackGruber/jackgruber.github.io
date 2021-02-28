@@ -120,7 +120,7 @@ services:
         ports:
           - "3000:3000/tcp"
         networks:
-          front:
+          - front
         volumes:
           - grafana_data:/var/lib/grafana
         environment:
