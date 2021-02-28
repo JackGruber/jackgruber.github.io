@@ -114,6 +114,17 @@ services:
       - /sys:/sys:ro
       - /var/lib/docker/:/var/lib/docker:ro
       - /dev/disk/:/dev/disk:ro
+      
+    grafana:
+        image: grafana/grafana
+        ports:
+          - "3000:3000/tcp"
+        networks:
+          front:
+        volumes:
+          - grafana_data:/var/lib/grafana
+        environment:
+          - GF_AUTH_ANONYMOUS_ENABLED=true
 
 networks:
   front:
@@ -121,6 +132,7 @@ networks:
 
 volumes:
   prometheus_data:
+  grafana_data:
 ```
 
 additionally we create a folder `grafanadata` and a file `prometheus.yml` with the following content:
