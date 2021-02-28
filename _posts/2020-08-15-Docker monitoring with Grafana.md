@@ -135,7 +135,7 @@ volumes:
   grafana_data:
 ```
 
-additionally we create a folder `grafanadata` and a file `prometheus.yml` with the following content:
+additionally we create a file `prometheus.yml` with the following content in the same folder as the `docker-compose.yml`:
 
 ### prometheus.yml
 
