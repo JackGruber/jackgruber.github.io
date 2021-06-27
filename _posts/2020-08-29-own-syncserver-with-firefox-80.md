@@ -16,7 +16,7 @@ With syncserver version 1.9.0 (git commit: `21717e3` or docker digest: `bf581395
 
 In addition to the `identity.sync.tokenserver.uri` settings for the syncserver URL, the following settings must be set to `false`.
 
-```txt
+```conf
 identity.fxaccounts.useSessionTokensForOAuth
 identity.sync.useOAuthForSyncToken
 ```
