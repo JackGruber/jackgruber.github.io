@@ -68,7 +68,7 @@ os_init();
 LMIC_reset();
 
 // Load the LoRa information from RTC
-if(LMIC.seqnoUp != 0)
+if (RTC_LMIC.seqnoUp != 0)
 { 
     LoadLMICFromRTC();
 }
@@ -123,3 +123,4 @@ Please respect [Fair Access Policy and Maximum Duty Cycle limits](https://www.th
 
 * 2020-09-18 Save and load complete LMIC structure and reset DutyCyle
 * 2020-11-26 Correct DutyCyle calculation for LMIC EU like band planes
+* 2022-01-03 Reload condition for LMIC corrected
