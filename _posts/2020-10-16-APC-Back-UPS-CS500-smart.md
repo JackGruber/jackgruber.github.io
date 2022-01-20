@@ -63,7 +63,7 @@ Change the Voltage sensor resolution to two decimal places with `VoltRes 2`.
 
 Configure the switches so that no standard MQTT messages are sent and that 0 = OFF and 1 = ON.
 
-```cfg
+```conf
 SwitchMode1 1
 SwitchTopic1 0
 SwitchMode2 1
@@ -72,7 +72,7 @@ SwitchTopic2 0
 
 To send the status of the UPS via MQTT, a rule must be created.
 
-```cfg
+```conf
 Rule1
 ON Switch1#state=0 DO publish Tasmota/stat/usv/OnLine %value% ENDON
 ON Switch1#state=1 DO publish Tasmota/stat/usv/OnLine %value% ENDON

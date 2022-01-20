@@ -9,24 +9,24 @@ Python3 can be installed via the Synology DSM Installation Center, but pip is no
 
 ## Install pip
 
-```cli
+```shell
 sudo python3 -m ensurepip
 ```
 
 ## Update pip
 
-```cli
+```shell
 sudo python3 -m pip install --upgrade pip
 ```
 
 ## Check pip version
 
-```cli
+```shell
 python3 -m pip -V
 ```
 
 ## Install a package
 
-```cli
+```shell
 sudo python3 -m pip install XYZ
 ```
