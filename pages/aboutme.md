@@ -56,7 +56,7 @@ Firewall ([Palo Alto Networks](https://www.paloaltonetworks.com/))
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2018-04 - ????-?? <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH](https://www.bosch.de/) as **IT Administrator** Manufacturing IT
 
-Manufacturing IT, MES, I4.0 Solutions (BhP/TEF-EAT3-MES)
+Manufacturing IT, MES, I4.0 Solutions (BhP/TEF-EAT3-MES, BhP/MFD5, CC/MFD5)
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2016-02 to 2018-03 <i class="fa fa-building-o" aria-hidden="true"></i> [AZ Marketing und Service GmbH](https://www.all-in.de/) as **IT project manager** (Subsidiary of Allgäuer Zeitungverlag GmbH)
 
