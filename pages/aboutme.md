@@ -54,7 +54,9 @@ Firewall ([Palo Alto Networks](https://www.paloaltonetworks.com/))
 <br/>
 ### <i class="fa fa-briefcase" aria-hidden="true"></i> Experience
 
-#### <i class="fa fa-calendar" aria-hidden="true"></i> 2018-04 - ????-?? <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH](https://www.bosch.de/) as **IT Administrator** Manufacturing IT
+#### <i class="fa fa-calendar" aria-hidden="true"></i> 2018-04 - 2022-07 <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH, Stuttgart](https://www.bosch.de/) as **Systemarchitect Automation Networkmanagement** department CI/PIN5
+
+#### <i class="fa fa-calendar" aria-hidden="true"></i> 2018-04 - 2022-07 <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH, Blaichach](https://www.bosch.de/) as **IT Administrator** Manufacturing IT
 
 Manufacturing IT, MES, I4.0 Solutions (BhP/TEF-EAT3-MES, BhP/MFD5, CC/MFD5)
 
