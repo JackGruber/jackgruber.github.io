@@ -5,10 +5,10 @@
 
 # --- Required options --- #
 # Name of website
-title: JackGruber
+title: Software Elements
 
 # Your name to show in the footer
-author: Gruber Alexander
+author:  Manikanta Gopi
 
 # --- List of links in the navigation bar --- #
 
@@ -39,15 +39,15 @@ round-avatar: true
 social-network-links:
   #email: "...."
   #  facebook: deanattali
-  github: jackgruber
-  twitter: gruberjack
+  github: itsManikantaGopi
+  twitter: Gopi_Manikanta_
   rss: true
   #  reddit: yourname
-  linkedin: gruberalexander
-  xing: Alexander_Gruber19
+  linkedin: gopi-manikanta-549163190
+#  xing: Alexander_Gruber19
   #  stackoverflow: "3943160/daattali"
   #  snapchat: deanat78
-  instagram: gruberjack
+  instagram: gopi.manikanta_
 #  youtube: user/deanat78
 #  spotify: yourname
 #  telephone: +14159998888
