@@ -3,9 +3,14 @@ layout: page
 permalink: "/pages/aboutme"
 title: About me
 ---
-
-<img src="/assets/img/aboutme.jpg">
-My name is Alexander Gruber and I live in the small "green" municipal [Wildpoldsried](http://www.wildpoldsried.de/) near the alps.
+<div style="margin-top : 20px; margin-bottom : 20px">
+    <div style="float: left; margin-right : 20px;">
+        <img src="https://avatars.githubusercontent.com/u/58616351?v=4" width="100">
+    </div>
+    <div 
+        style="align-content: center"> <h1>Manikanta Gopi</h1>
+    </div>
+</div>
 
 ### <i class="fa fa-cubes" aria-hidden="true"></i> Skills
 
