@@ -43,7 +43,10 @@ Storage Systems ([NetApp](https://www.netapp.com/)) &bull;
 SQL &bull;
 DBs ([Microsoft](https://www.microsoft.com) SQL Server) &bull;
 Network, WiFi (Enterasys meanwhile [Extreme Networks](https://www.extremenetworks.com/)) &bull;
+Network ([Cisco](https://www.cisco.com/)) &bull;
+Network ([Arubanetworks](https://www.arubanetworks.com/)) &bull;
 SD-WAN ([silver peak](https://www.silver-peak.com/)) &bull;
+Network Automation ([OpenText](https://www.opentext.com/)) &bull;
 
 #### <i class="fa fa-filter" aria-hidden="true"></i> Security
 
