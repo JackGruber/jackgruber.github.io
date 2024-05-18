@@ -43,7 +43,10 @@ Storage Systems ([NetApp](https://www.netapp.com/)) &bull;
 SQL &bull;
 DBs ([Microsoft](https://www.microsoft.com) SQL Server) &bull;
 Network, WiFi (Enterasys meanwhile [Extreme Networks](https://www.extremenetworks.com/)) &bull;
+Network ([Cisco](https://www.cisco.com/)) &bull;
+Network ([Arubanetworks](https://www.arubanetworks.com/)) &bull;
 SD-WAN ([silver peak](https://www.silver-peak.com/)) &bull;
+Network Automation ([OpenText](https://www.opentext.com/)) &bull;
 
 #### <i class="fa fa-filter" aria-hidden="true"></i> Security
 
@@ -54,7 +57,9 @@ Firewall ([Palo Alto Networks](https://www.paloaltonetworks.com/))
 <br/>
 ### <i class="fa fa-briefcase" aria-hidden="true"></i> Experience
 
-#### <i class="fa fa-calendar" aria-hidden="true"></i> 2023-01 - today <i class="fa fa-building-o" aria-hidden="true"></i> [Bosch Digital, Stuttgart](https://www.bosch-digital.com/) as **Systemarchitect Automation Networkmanagement** department BD/PIN5
+#### <i class="fa fa-calendar" aria-hidden="true"></i> 2023-04 - today <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH, Bosch Digital, Stuttgart](https://www.bosch-digital.com/) as **Teamlead Networkautomation** department BD/ISA-NSC4
+
+#### <i class="fa fa-calendar" aria-hidden="true"></i> 2023-01 - 2023-04 <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH, Bosch Digital, Stuttgart](https://www.bosch-digital.com/) as **Systemarchitect Automation Networkmanagement** department BD/PIN5, BD/ISA-NSC4
 
 #### <i class="fa fa-calendar" aria-hidden="true"></i> 2022-08 - 2023-12 <i class="fa fa-building-o" aria-hidden="true"></i> [Robert Bosch GmbH, Stuttgart](https://www.bosch.de/) as **Systemarchitect Automation Networkmanagement** department CI/PIN5
 
