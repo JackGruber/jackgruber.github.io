@@ -8,4 +8,4 @@ thumbnail-img: /img/posts/2024-12-27/inquisition_wave3.jpg
 ---
 
 More Inquisition to purge the heretical scum in the shadows.
-{% include image-gallery.html folder= "/img/posts/2024-12-27/" %}
+{% include image-gallery.html folder= "/img/posts/2024-12-27/" title="False" %}

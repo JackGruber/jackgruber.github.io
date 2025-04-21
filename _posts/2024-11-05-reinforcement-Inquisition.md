@@ -7,5 +7,5 @@ tags: [Tabletop, Miniture, Painting, Kill Team, Inquisition]
 thumbnail-img: /img/posts/2024-11-05/wave_1_2.jpg
 ---
 
-{% include image-gallery.html folder= "/img/posts/2024-11-05/" %}
+{% include image-gallery.html folder= "/img/posts/2024-11-05/" title="False" %}
 Grim reinforcements for the Inquisition: elite agents, ready to drown heresy and treachery in blood.
