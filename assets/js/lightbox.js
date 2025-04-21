@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 var filename = href.split('/').pop();
                 var split = filename.split(".");
                 var name = split[0];
-                element.setAttribute('title',name);
             }
         }
     });
@@ -131,7 +130,8 @@ document.addEventListener("DOMContentLoaded", function() {
     elements.forEach(element => {
         element.addEventListener("click", function(event) {
             event.preventDefault();
-            document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\''+this.getAttribute('href')+'\') center center / contain no-repeat;" title="'+this.getAttribute('title')+'" ><img src="'+this.getAttribute('href')+'" alt="'+this.getAttribute('title')+'" /></div><span>'+this.getAttribute('title')+'</span>';
+            title = this.getAttribute('title').replace(/%20/g, " ");
+            document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url(\''+this.getAttribute('href')+'\') center center / contain no-repeat;" title="'+title+'" ><img src="'+this.getAttribute('href')+'" alt="'+title+'" /></div><span>'+title+'</span>';
             document.getElementById('lightbox').style.display = 'block';
 
             setGallery(this);
