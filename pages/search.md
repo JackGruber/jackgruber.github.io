@@ -4,7 +4,7 @@ cover-img: "/assets/img/head/search.jpg"
 ---
 
 <!-- HTML elements for search -->
-<input type="text" id="search-input" placeholder="Search blog posts..">
+<input type="text" id="search-input" placeholder="Search in blog / pages">
 <ul id="results-container"></ul>
 
 <!-- script pointing to jekyll-search.js -->
