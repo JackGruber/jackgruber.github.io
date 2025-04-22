@@ -9,10 +9,24 @@
           {% assign title = "" %}
         {% endif %}
 
-        {% unless filename contains 'thump' %}
+        {% comment %} Get thump file {% endcomment %}
+        {% assign thump_filename = filename | append: "_thump" | append: file.extname %}
+        {% assign thump_dir = file.path | replace: filename, "" | replace: file.extname, "" %}
+        {% assign thump = thump_dir | append: thump_filename %}
+        {% assign thump_exists = false %}
+        {% for static_file in site.static_files %}
+          {% if static_file.path contains thump %}
+            {% assign thump_exists = true %}
+          {% endif %}
+        {% endfor %}
+        {% if thump_exists == false %}
+          {% assign thump = file.path %}
+        {% endif %}
+
+        {% unless filename contains '_thump' %}
           <li>
             <a href="{{ file.path | relative_url }}" title="{{ title }}">
-              <img src="{{ file.path | relative_url }}" alt="{{ filename }}" title="{{ title }}" />
+              <img src="{{ thump | relative_url }}" alt="{{ filename }}" title="{{ title }}" />
               <span>{{ title }}</span>
             </a>
           </li>
