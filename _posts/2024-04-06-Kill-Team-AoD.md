@@ -4,7 +4,7 @@ title: Kill Team Angels of Death
 subtitle:
 show-img: true
 tags: [Tabletop, Miniture, Painting, Kill Team, Angels of Death]
-thumbnail-img: /img/posts/2024-04-06/raven_guard_thump.jpg
+thumbnail-img: /img/posts/2024-04-06/raven_guard_thumb.jpg
 ---
 
 {% include image-gallery.html folder= "/img/posts/2024-04-06/" title=false %}

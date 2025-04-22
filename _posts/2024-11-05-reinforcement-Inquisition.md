@@ -4,7 +4,7 @@ title: Grim reinforcements for the Inquisition
 subtitle:
 show-img: true
 tags: [Tabletop, Miniture, Painting, Kill Team, Inquisition]
-thumbnail-img: /img/posts/2024-11-05/wave_1_2_thump.jpg
+thumbnail-img: /img/posts/2024-11-05/wave_1_2_thumb.jpg
 ---
 
 {% include image-gallery.html folder= "/img/posts/2024-11-05/" title=false %}
