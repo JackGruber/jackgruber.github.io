@@ -24,6 +24,8 @@ navbar-links:
     - Tags: "tags"
   Tabletop:
     - Warhammer 40.000: "pages/tabletop/40k"
+    - Infinity: "pages/tabletop/Infinity"
+    - Battltech: "pages/tabletop/battletech"
   About Me: "pages/aboutme"
   Search: "pages/search"
 ################
