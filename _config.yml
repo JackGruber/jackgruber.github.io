@@ -22,6 +22,8 @@ navbar-links:
   Blog:
     - Posts: "blog"
     - Tags: "tags"
+  Tabletop:
+    - Warhammer 40.000: "pages/tabletop/40k"
   About Me: "pages/aboutme"
   Search: "pages/search"
 ################
