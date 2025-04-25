@@ -1,17 +1,9 @@
-/* .image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.image-gallery img {
-  width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
-} */
-
 .image-gallery {
   overflow: auto; 
   margin-left: -1%!important;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
 }
 .image-gallery li {
   float: left; 
