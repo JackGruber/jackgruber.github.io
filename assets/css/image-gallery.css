@@ -3,7 +3,6 @@
   margin-left: -1%!important;
   display: flex;
   flex-wrap: wrap;
-  gap: 1%;
 }
 .image-gallery li {
   float: left; 
