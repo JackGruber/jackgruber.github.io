@@ -23,10 +23,10 @@ js: "/assets/js/toc.js"
 
 {% include image-gallery.html folder= "/img/pages/battletech/sandfalken/" %}
 
-### Night hunters
+### Night Hunters
 
 {% include image-gallery.html folder= "/img/pages/battletech/night_hunters/" %}
 
-### Orange
+### Orange Claws
 
-{% include image-gallery.html folder= "/img/pages/battletech/orange/" %}
+{% include image-gallery.html folder= "/img/pages/battletech/orange_claws/" %}
