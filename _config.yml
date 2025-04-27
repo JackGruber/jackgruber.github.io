@@ -25,7 +25,7 @@ navbar-links:
   Tabletop:
     - Warhammer 40.000: "pages/tabletop/40k"
     - Infinity: "pages/tabletop/Infinity"
-    - Battltech: "pages/tabletop/battletech"
+    - Battletech: "pages/tabletop/battletech"
     - Saga: "pages/tabletop/saga"
     - Summoners: "pages/tabletop/summoners"
     - Various: "pages/tabletop/various"

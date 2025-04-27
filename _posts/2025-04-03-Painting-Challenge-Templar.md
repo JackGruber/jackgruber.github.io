@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Painting challange 40k Templar
+title: Painting Challenge 40k Templar
 subtitle:
 show-img: true
 tags: [Tabletop, Miniture, Painting, Painting Challenge, 40k, Heldenschmiede]
