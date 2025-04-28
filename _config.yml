@@ -31,6 +31,8 @@ navbar-links:
     - Various: "pages/tabletop/various"
   About Me: "pages/aboutme"
   Search: "pages/search"
+
+footer-extra: ["footer-extra.html"]
 ################
 # --- Logo --- #
 ################
