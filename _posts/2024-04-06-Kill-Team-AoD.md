@@ -3,7 +3,7 @@ layout: post
 title: Kill Team Angels of Death
 subtitle:
 show-img: true
-tags: [Tabletop, Miniture, Painting, Kill Team, Angels of Death]
+tags: [Tabletop, Miniture, Painting, Kill Team, Angels of Death, 40k]
 thumbnail-img: /img/posts/2024-04-06/raven_guard_thumb.jpg
 ---
 

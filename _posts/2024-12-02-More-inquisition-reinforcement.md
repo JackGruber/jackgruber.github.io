@@ -3,7 +3,7 @@ layout: post
 title: Grim reinforcements for the Inquisition
 subtitle:
 show-img: true
-tags: [Tabletop, Miniture, Painting, Kill Team, Inquisition]
+tags: [Tabletop, Miniture, Painting, Kill Team, Inquisition, 40k]
 thumbnail-img: /img/posts/2024-12-02/wave2_thumb.jpg
 ---
 

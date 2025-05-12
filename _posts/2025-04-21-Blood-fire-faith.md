@@ -3,7 +3,7 @@ layout: post
 title: Blood, fire and faith
 subtitle:
 show-img: true
-tags: [Tabletop, Miniture, Painting, Kill Team, Inquisition]
+tags: [Tabletop, Miniture, Painting, Kill Team, Inquisition, 40k]
 thumbnail-img: /img/posts/2025-04-21/wave_3k_thumb.jpg
 ---
 
