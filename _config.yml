@@ -29,6 +29,7 @@ navbar-links:
     - Saga: "pages/tabletop/saga"
     - Summoners: "pages/tabletop/summoners"
     - Various: "pages/tabletop/various"
+    - Terain: "pages/tabletop/terrain"
   About Me: "pages/aboutme"
   Search: "pages/search"
 
