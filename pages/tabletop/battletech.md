@@ -39,4 +39,4 @@ js: "/assets/js/toc.js"
 
 ### Overview
 
-{% include image-gallery.html folder= "/img/pages/battletech/support/overview/" title=false %}
+{% include image-gallery.html folder= "/img/pages/battletech/support/" %}
