@@ -23,6 +23,10 @@ js: "/assets/js/toc.js"
 
 {% include image-gallery.html folder= "/img/pages/battletech/sandfalken/" %}
 
+### Greyhounds
+
+{% include image-gallery.html folder= "/img/pages/battletech/greyhounds/" %}
+
 ### Night Hunters
 
 {% include image-gallery.html folder= "/img/pages/battletech/night_hunters/" %}
