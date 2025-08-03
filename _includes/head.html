@@ -26,8 +26,8 @@
     {%- elsif page.subtitle -%}
       {{ page.subtitle | strip_html | xml_escape }}
     {%- else -%}
-      {%- assign excerpt_length = site.excerpt_length | default: 50 -%}
-      {{ page.content | strip_html | xml_escape | truncatewords: excerpt_length | strip }}
+      {%- assign excerpt_length = 150 -%}
+      {{ page.content | strip_html | xml_escape | truncate: excerpt_length | strip }}
     {%- endif -%}
   {% endcapture %}
 
