@@ -23,11 +23,12 @@ navbar-links:
     - Posts: "blog"
     - Tags: "tags"
   Tabletop:
+    - Battletech: "pages/tabletop/battletech"
     - Warhammer 40.000: "pages/tabletop/40k"
     - Infinity: "pages/tabletop/Infinity"
-    - Battletech: "pages/tabletop/battletech"
     - Saga: "pages/tabletop/saga"
     - Summoners: "pages/tabletop/summoners"
+    - Trench Crusade: "pages/tabletop/trench-crusade"
     - Various: "pages/tabletop/various"
     - Terain: "pages/tabletop/terrain"
   About Me: "pages/aboutme"
