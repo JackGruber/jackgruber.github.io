@@ -31,11 +31,13 @@ Create a file `mermaid.html` in `_include` directory with the following content:
 
 Add the following content to the end of file `footer-scripts.html` in directory `_include`.
 
+{% raw %}
 ```html
 {% if page.mermaid %} 
   {% include mermaid.html %} 
 {% endif %}
 ```
+{% endraw %}
 
 ## Enable mermaid rendering
 
