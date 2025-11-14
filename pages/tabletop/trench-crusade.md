@@ -10,3 +10,7 @@ js: "/assets/js/toc.js"
 ## Trench Pilgrims - Ghosts
 
 {% include image-gallery.html folder= "/img/pages/trench-crusade/ghosts/" %}
+
+## New Antioch - Inquisition
+
+{% include image-gallery.html folder= "/img/pages/trench-crusade/Inquisition/" %}
