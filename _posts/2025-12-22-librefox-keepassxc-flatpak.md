@@ -49,7 +49,7 @@ exec flatpak-spawn \
     -- keepassxc-proxy "$@"
 EOF
 
-chmod +x "${LW_BIN_DIR}${LW_WRAPPER_SCRIPT}" 
+chmod +x "${LW_WRAPPER_SCRIPT}" 
 ```
 
 ## 3. Create Native Messaging Host JSON
