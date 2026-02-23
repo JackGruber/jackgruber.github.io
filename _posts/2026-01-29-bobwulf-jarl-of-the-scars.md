@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Painting Challenge 40k Space Wolve
-subtitle: Bobwulf, Jarl of the scars
+title: Bobwulf, Jarl of the scars
+subtitle: 
 show-img: true
 tags: [Tabletop, Miniture, Painting, Painting Challenge, 40k, Heldenschmiede]
 thumbnail-img: /img/posts/2026-01-29/Painting Challenge_thumb.jpg
