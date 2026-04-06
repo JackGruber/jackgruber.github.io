@@ -37,6 +37,4 @@ js: "/assets/js/toc.js"
 
 ## Support
 
-### Overview
-
 {% include image-gallery.html folder= "/img/pages/battletech/support/" %}
